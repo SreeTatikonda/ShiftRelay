@@ -1,0 +1,21 @@
+{
+    "$schema": "./node_modules/wrangler/config-schema.json",
+    "name": "shiftrelay",
+    "account_id": "74f4568c6331c7bc4c3b5e561586bfac",
+    "main": "worker/index.ts",
+    "compatibility_date": "2026-05-15",
+    "compatibility_flags": ["nodejs_compat"],
+  
+    "vars": {
+      "NEBIUS_MODEL": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B"
+    },
+  
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "shiftrelay-db",
+        "database_id": "d6ee45ac-5e6a-43ab-91c4-356dc3738bdf",
+        "migrations_dir": "drizzle"
+      }
+    ]
+  }
